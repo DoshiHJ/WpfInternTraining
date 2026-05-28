@@ -1,0 +1,22 @@
+{
+  "AppSettings": {
+    "ApplicationName": "Task Manager Pro",
+    "Version": "1.0.0",
+    "Environment": "Development"
+  },
+  "DatabaseConfig": {
+    "Provider": "SQLite",
+    "ConnectionString": "Data Source=tasks.db",
+    "MaxConnections": 10
+  },
+  "FeatureFlags": {
+    "EnableLogging": true,
+    "EnableNotifications": true,
+    "EnableAutoSave": true
+  },
+  "UserPreferences": {
+    "Theme": "Light",
+    "Language": "Dark",
+    "DateFormat": "yy/mm/dd"
+  }
+}
