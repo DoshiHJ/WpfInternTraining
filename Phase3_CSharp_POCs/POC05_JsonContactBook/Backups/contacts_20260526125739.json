@@ -1,0 +1,66 @@
+{
+  "Contacts": [
+    {
+      "Id": "1073d41b-3826-4aa9-8963-6bfd396f49c0",
+      "Name": "kanu",
+      "PhoneNumber": "8733998160",
+      "Email": "kanu@gmail.com",
+      "Address": "gopipura varacha",
+      "Category": "friend",
+      "DateAdded": "2026-05-25T15:16:23.3466887+05:30",
+      "IsFavorite": false
+    },
+    {
+      "Id": "700079b9-51da-4b18-92f7-75138bbe0196",
+      "Name": "jay",
+      "PhoneNumber": "6789998765",
+      "Email": "jay@gmail.com",
+      "Address": "surat",
+      "Category": "friend",
+      "DateAdded": "2026-05-25T15:51:23.9525039+05:30",
+      "IsFavorite": true
+    },
+    {
+      "Id": "79370814-ae4a-4fc1-9cba-61e41e16a395",
+      "Name": "harsh",
+      "PhoneNumber": "87654",
+      "Email": "harsh122@gmial.com",
+      "Address": "dcsdf",
+      "Category": "other",
+      "DateAdded": "2026-05-25T16:04:29.2763701+05:30",
+      "IsFavorite": false
+    },
+    {
+      "Id": "26a09335-525e-47f9-a87e-14ca976e867a",
+      "Name": "harsh",
+      "PhoneNumber": "8787878787",
+      "Email": "nanu@gmail.com",
+      "Address": "ahmedaa",
+      "Category": "Work",
+      "DateAdded": "2026-05-25T17:23:56.8151798+05:30",
+      "IsFavorite": false
+    },
+    {
+      "Id": "8ed7b375-d9c6-41d7-a045-3000768cad29",
+      "Name": "nanu",
+      "PhoneNumber": "1234567890",
+      "Email": "nnu@gmail.com",
+      "Address": "surat ahm",
+      "Category": "Work",
+      "DateAdded": "2026-05-25T17:30:24.4647374+05:30",
+      "IsFavorite": true
+    },
+    {
+      "Id": "b904ccfd-eec2-42f0-bb21-441e46ca72f9",
+      "Name": "harsh",
+      "PhoneNumber": "4543212345",
+      "Email": "harsh12@gmail.com",
+      "Address": "ahm",
+      "Category": "Friends",
+      "DateAdded": "2026-05-25T17:32:09.8431253+05:30",
+      "IsFavorite": false
+    }
+  ],
+  "LastModified": "2026-05-26T12:57:26.1517158+05:30",
+  "TotalContacts": 6
+}
