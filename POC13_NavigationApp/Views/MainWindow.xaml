@@ -1,0 +1,175 @@
+﻿<Window x:Class="POC13_NavigationApp.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:viewModels="clr-namespace:POC13_NavigationApp.ViewModels"
+        xmlns:views="clr-namespace:POC13_NavigationApp.Views"
+
+        Title="POC13 Navigation App"
+        Height="500"
+        Width="900">
+
+    <Window.Resources>
+
+        <DataTemplate DataType="{x:Type viewModels:HomeViewModel}">
+            <views:HomeView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModels:ProductsViewModel}">
+            <views:ProductsView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModels:SettingsViewModel}">
+            <views:SettingsView/>
+        </DataTemplate>
+
+    </Window.Resources>
+
+    <Grid Background="{DynamicResource WindowBackgroundBrush}">
+        
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="180"/>
+
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel
+    Grid.Column="0"
+    Background="{DynamicResource NavigationBackgroundBrush}"
+    Visibility="{Binding NavigationVisibility}">
+            
+            <TextBlock
+                Foreground="{DynamicResource PrimaryTextBrush}"
+                Text="Navigation"
+                FontSize="24"
+                FontWeight="Bold"
+                Margin="20"/>
+
+            <Button
+                Content="🏠 Home"
+                Command="{Binding HomeCommand}"
+                Height="45"
+                Margin="10"
+>
+
+                <Button.Style>
+
+                    <Style TargetType="Button">
+
+                        <Setter Property="Background"
+                    Value="White"/>
+
+                        <Style.Triggers>
+
+                            <DataTrigger
+                    Binding="{Binding IsHomeSelected}"
+                    Value="True">
+
+                                <Setter Property="Background"
+                            Value="DodgerBlue"/>
+
+                                <Setter Property="Foreground"
+                            Value="White"/>
+
+                            </DataTrigger>
+
+                        </Style.Triggers>
+
+                    </Style>
+
+                </Button.Style>
+
+            </Button>
+
+            <Button
+                Content="📦 Products"
+                Height="45"
+                Margin="10"
+                Command="{Binding ProductsCommand}"
+>
+
+                <Button.Style>
+
+                    <Style TargetType="Button">
+
+                        <Setter Property="Background"
+                    Value="White"/>
+
+                        <Style.Triggers>
+
+                            <DataTrigger
+                                Binding="{Binding IsProductsSelected}"
+                                Value="True">
+
+                                <Setter Property="Background"
+                            Value="DodgerBlue"/>
+
+                                <Setter Property="Foreground"
+                            Value="White"/>
+
+                            </DataTrigger>
+
+                        </Style.Triggers>
+
+                    </Style>
+
+                </Button.Style>
+
+            </Button>
+
+            <Button
+                Content="⚙ Settings"
+                Height="45"
+                Margin="10"
+                Command="{Binding SettingsCommand}">
+
+                <Button.Style>
+
+                    <Style TargetType="Button">
+
+                        <Setter Property="Background"
+                    Value="White"/>
+
+                        <Style.Triggers>
+
+                            <DataTrigger
+                                Binding="{Binding IsSettingsSelected}"
+                                Value="True">
+
+                                <Setter Property="Background"
+                            Value="DodgerBlue"/>
+
+                                <Setter Property="Foreground"
+                            Value="White"/>
+
+                            </DataTrigger>
+
+                        </Style.Triggers>
+
+                    </Style>
+
+                </Button.Style>
+
+            </Button>
+
+
+
+        </StackPanel>
+
+
+        <Border
+            Background="{DynamicResource CardBackgroundBrush}"
+            BorderBrush="{DynamicResource BorderBrushColor}"
+            Grid.Column="1"
+            Padding="20">
+
+            <ContentControl
+                Content="{Binding NavigationService.CurrentViewModel}"/>
+
+        </Border>
+
+    </Grid>
+
+</Window>
