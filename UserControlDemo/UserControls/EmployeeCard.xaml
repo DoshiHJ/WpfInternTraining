@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="UserControlDemo.UserControls.EmployeeCard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="150"
+             Width="320">
+
+    <Border BorderBrush="Black"
+            BorderThickness="2"
+            CornerRadius="10"
+            Background="LightBlue"
+            Margin="10"
+            Padding="10">
+
+        <StackPanel>
+
+            <TextBlock Text="Employee Card"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Margin="0,0,0,10"/>
+
+            <TextBlock
+                FontSize="16"
+                Text="{Binding EmployeeName,
+                               RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+
+            <TextBlock
+                FontSize="16"
+                Text="{Binding Department,
+                               RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+
+            <TextBlock
+                FontSize="16"
+                Text="{Binding Salary,
+                               RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+
+        </StackPanel>
+
+    </Border>
+
+</UserControl>
